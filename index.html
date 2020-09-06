@@ -39,11 +39,7 @@
     new Vue({
         el:"#app",
         data:{
-            aaa: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) +
-                "-" + new Date().getDate()+ " "+(new Date().getHours()<10?("0"+new Date().getHours())
-                    :new Date().getHours())+":"+(new Date().getMinutes()<10?("0"+new Date().getMinutes()):
-                    new Date().getMinutes())+":"+(new Date().getSeconds()<10?("0"+new Date().getSeconds()):
-                    new Date().getSeconds())
+            aaa: <html> <head> <script type="text/javascript"> function startTime() { var today=new Date() var h=today.getHours() var m=today.getMinutes() var s=today.getSeconds() //add a zero in front of numbers which<10 h=checkTime(h) m=checkTime(m) s=checkTime(s) document.getElementById('wux').innerHTML=h+":"+m+":"+s t=setTimeout('startTime()',100) } //add a zero in front of numbers which<10 function checkTime(i) { if (i<10) { i="0" + i } return i } </script> </head> <body onload="startTime()"> <div id="wux"> </div> </body> </html>
         }
 
 
