@@ -39,26 +39,10 @@
     new Vue({
         el:"#app",
         data:{
-            aaa:   <script type="text/javascript">
-        function Appendzero(obj)
-        {
-            if(obj<10) return "0" +""+ obj;
-            else return obj;
-        }
-        
-        function getDateWeek()
-        {
-            var now=new Date();
-            var year=now.getFullYear();//获取四位数年数
-            var month=now.getMonth()+1;
-            var date=now.getDate();
-            var weeknum=now.getDay();
-     
-            var s=year + "-"+Appendzero(month) + "-" + Appendzero(date) + " " + getWeek(weeknum)+" ";
-            document.write(s);
-        
-        getDateWeek();
-             + "  "+(new Date().getHours()<10?("0"+new Date().getHours())
+            aaa: new Date().getFullYear() + "-" + (new Date().getMonth()<10?("0"+new Date().getMonth()+1)
+                :new Date().getMonth()) +
+                "-" + (new Date().getDate()<10?("0"+new Date().getDate())
+                    :new Date().getDate())+ " "+(new Date().getHours()<10?("0"+new Date().getHours())
                     :new Date().getHours())+":"+(new Date().getMinutes()<10?("0"+new Date().getMinutes()):
                     new Date().getMinutes())+":"+(new Date().getSeconds()<10?("0"+new Date().getSeconds()):
                     new Date().getSeconds())
