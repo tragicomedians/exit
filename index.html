@@ -39,8 +39,13 @@
     new Vue({
         el:"#app",
         data:{
-            aaa: new Date().getFullYear() + "-" + (new Date().getMonth() <10?(+ 1, "0"+new Date().getMonth()) +
-                "-" + new Date().getDate()<10?("0"+new Date().getDate() + "  "+(new Date().getHours()<10?("0"+new Date().getHours())
+            aaa: 
+            var d = new Date();
+var ye = d.getFullYear();
+var mo = (d.getMonth()+1).toString().padStart(2,'0');
+var da = d.getDate().toString().padStart(2,'0');
+var time = ye+'-'+mo+'-'+da;
+alert(time); + "  "+(new Date().getHours()<10?("0"+new Date().getHours())
                     :new Date().getHours())+":"+(new Date().getMinutes()<10?("0"+new Date().getMinutes()):
                     new Date().getMinutes())+":"+(new Date().getSeconds()<10?("0"+new Date().getSeconds()):
                     new Date().getSeconds())
