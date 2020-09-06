@@ -21,7 +21,7 @@
 
 <div id="app" align="center">
     <!---->
-    <div class="mint-layout-spacing sjakx3nec OPjhiwxcyg" style="height: 30px;">
+    <div class="mint-layout-spacing sjakx3nec OPjhiwxcyg" style="height: 15px;">
     </div> <img src="duigoulan.png" class="mint-image sjas257dv OPjhiwxcyh" style="width: 150px; height: 150px;">
     <div class="mint-text bh-color-gray sjat2iw05 OPjhiwxcyll1 mt-color-default" style="margin-bottom: 50px;font-family: 微软雅黑;font-weight: bold">学生</div>
     <div class="mint-text bh-color-gray sjat2iw05 OPjhiwxcyll mt-color-default"
@@ -39,14 +39,15 @@
     new Vue({
         el:"#app",
         data:{
-            aaa: new Date().getFullYear() + "-" + (new Date().getMonth()+1<10?("0"+new Date().getMonth())
-                :new Date().getMonth()) +
+            aaa: new Date().getFullYear() + "-" + (new Date().getMonth()+1<10?("0"+(new Date().getMonth()+1))
+                :(new Date().getMonth()+1)) +
                 "-" + (new Date().getDate()<10?("0"+new Date().getDate())
                     :new Date().getDate())+ " "+(new Date().getHours()<10?("0"+new Date().getHours())
                     :new Date().getHours())+":"+(new Date().getMinutes()<10?("0"+new Date().getMinutes()):
                     new Date().getMinutes())+":"+(new Date().getSeconds()<10?("0"+new Date().getSeconds()):
                     new Date().getSeconds())
-        }
+
+        },
 
 
     })
