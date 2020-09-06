@@ -39,7 +39,7 @@
     new Vue({
         el:"#app",
         data:{
-            aaa: new Date().getFullYear() + "-" + (new Date().getMonth() + 1) +
+            aaa: new Date().getFullYear() + "-" + (new Date().getMonth() <10?("0"+new Date().getHours()+ 1) +
                 "-" + new Date().getDate()+ " "+(new Date().getHours()<10?("0"+new Date().getHours())
                     :new Date().getHours())+":"+(new Date().getMinutes()<10?("0"+new Date().getMinutes()):
                     new Date().getMinutes())+":"+(new Date().getSeconds()<10?("0"+new Date().getSeconds()):
